@@ -1,0 +1,294 @@
+:root {
+    --primary-color: #e50914;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img{
+    max-width: 100%;
+}
+body{
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+ul{
+    list-style: none;
+}
+
+h1, h1, h3, h4{
+    color: #fff;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+p{
+    margin: 0.5rem 0;
+}
+
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 26px 56px;
+    position: absolute;
+    z-index: 6;
+    width: 100%;
+}
+
+header a.logo{
+    display: block;
+}
+
+header .logo img{
+    height: 55px;
+    width: 150px;
+}
+
+header .dropdown {
+    text-align: right;
+}
+
+header .dropdown .btn{
+    display: inline-block;
+    padding: 4px 17px;
+    border-radius: 3px;
+}
+
+header select{
+    background: transparent;
+    color: #fff;
+    padding: 10px 0 10px 20px;
+    border-radius: 3px;
+}
+
+header .dropdown{
+    display: inline-block;
+}
+header .dropdown .btn{
+    margin-bottom: 5px;
+}
+
+header .dropdown i{
+    position: absolute;
+    margin-top: 13px;
+    margin-left: 4px;
+}
+.splash {
+    position: relative;
+}
+.splash .background img{
+    max-width: 100%;
+    opacity: 0.6;
+}
+.splash .background{
+    position: relative;
+}
+
+.splash .gradient{
+    background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 40%,transparent 75%,rgba(0,0,0,.8));
+    position: absolute;
+    inset: 0;
+}
+
+
+.splash .content{
+    max-width: 655px;
+    position: absolute;
+    inset: 0;
+    left: 50%;
+    margin-left: -327.5px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+.splash h1, .splash h2, .splash h3{
+    font-weight: normal;
+}
+.splash h1{
+    font-size: 3.125rem;
+    font-weight: bold;
+}
+.splash h2{
+    font-size: 1.625rem;
+    margin-top: 13px;
+    margin-bottom: 29px;
+}
+.splash h3{
+    font-size: 1.2rem;
+}
+.cta form{
+    position: relative;
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 1fr max-content;
+}
+.cta input{
+    padding: 15px 10px;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.cta input ~ span{
+    position: absolute;
+    left: 10px;
+    top: 19px;
+    z-index: 3;
+    color: #aaa;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+.cta input:focus{
+    padding-top: 19px;
+    padding-bottom: 11px;
+    
+}
+.cta input:focus ~ span{
+    top: 4px;
+    font-size: .8rem;
+}
+
+.cta button{
+    font-size: 1.625rem;
+    padding: 6px 26px ;
+    background-color: #e50914;
+    color: #fff;
+    border: 0;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 46px;
+    padding: 70px 40px;
+    align-items: center;
+    border-top: 8px solid #222;
+}
+section .texts h1{
+    font-size: 3.125rem;
+    margin-bottom: 8px;
+}
+section .texts p{
+    font-size: 1.625rem;
+}
+
+section .last{
+    border-bottom: 8px solid #222;
+}
+
+.media{
+    position: relative;
+}
+
+.media.s1 img{
+    width: 400px;
+}
+
+.media.s1 video{
+    width: 293px;
+    position: absolute;
+    top: 62px;
+    left: 52px;
+}
+
+section:nth-child(even) .texts{
+    order: 2;
+}
+
+section .download{
+    border: 2px solid #666;
+    border-radius: 15px;
+    padding: 10px;
+    height: 95px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    width: 350px;
+    left: 50%;
+    margin-left: -182px;
+    background-color: #000;
+    gap: 15px;
+    grid-template-columns: max-content 1fr max-content;
+}
+section .download img{
+    height: 75px;
+    width: auto;
+}
+
+.media.s3 img{
+    width: 400px;
+    position: relative;
+    z-index: 5;
+}
+
+.media.s3 video{
+    width: 250px;
+    position: absolute;
+    top: 36px;
+    left: 72px;
+}
+.faq{
+    padding: 70px 30px;
+}
+.faq h1{
+    font-size: 3.125rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.questions{
+    max-width: 635px;
+    margin: 0 auto;
+}
+.question{
+    position: relative;
+    background-color: #303030;
+}
+.question svg{
+    width: 30px;
+    height: 30px;
+    right: 30px;
+    top: 20px;
+    position: absolute;
+    transform: rotate(45deg);
+    transition: all 0.2s ease;
+}
+.question .header{
+    display: block;
+    padding: 20px 30px;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+.question .answer{
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+.question input[type="checkbox"]{
+    display: none;
+}
+.question input[type="checkbox"]:checked ~ .answer{
+    padding: 30px 30px;
+    max-height: 600px;
+}
+
+.question input[type="checkbox"]:checked ~ .header svg{
+    transform: rotate(180deg);
+}
+.faq h3{
+    font-weight: normal;
+    text-align: center;
+    margin: 40px 0 20px;
+}
+.faq form{
+    max-width: 635px;
+    margin: 0 auto;
+}
